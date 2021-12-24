@@ -1,0 +1,80 @@
+{
+    "data":[
+        {
+          "id": "1",
+          "text": "Account"
+        },
+        {
+          "id": "2",
+          "text": "Administrator"
+        },
+        {
+          "id": "17",
+          "text": "BDIT"
+        },
+        {
+          "id": "11",
+          "text": "CS"
+        },
+        {
+          "id": "9",
+          "text": "CY"
+        },
+        {
+          "id": "13",
+          "text": "Document"
+        },
+        {
+          "id": "8",
+          "text": "Drybulk"
+        },
+        {
+          "id": "12",
+          "text": "EXECUTIVE"
+        },
+        {
+          "id": "3",
+          "text": "FEEDER"
+        },
+        {
+          "id": "6",
+          "text": "HRM"
+        },
+        {
+          "id": "4",
+          "text": "ICT"
+        },
+        {
+          "id": "15",
+          "text": "IM"
+        },
+        {
+          "id": "18",
+          "text": "IT-CENTER"
+        },
+        {
+          "id": "5",
+          "text": "LCH"
+        },
+        {
+          "id": "14",
+          "text": "Marketing"
+        },
+        {
+          "id": "19",
+          "text": "Operation"
+        },
+        {
+          "id": "7",
+          "text": "PORT"
+        },
+        {
+          "id": "10",
+          "text": "Transport"
+        },
+        {
+          "id": "16",
+          "text": "Warehouse"
+        }
+      ]
+}

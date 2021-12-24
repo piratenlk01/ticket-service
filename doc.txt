@@ -1,0 +1,1 @@
+ng build --prod --base-href /ticket-service/ --output-path docs

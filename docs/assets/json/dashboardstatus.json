@@ -1,0 +1,29 @@
+{
+    "data": [
+        {
+            "Status": 0,
+            "StatusDescription": "รวมทั้งหมด",
+            "CountTotal": 8
+        },
+        {
+            "Status": 1,
+            "StatusDescription": "Tickets ใหม่",
+            "CountTotal": 3
+        },
+        {
+            "Status": 2,
+            "StatusDescription": "กำลังดำเนินการ",
+            "CountTotal": 1
+        },
+        {
+            "Status": 4,
+            "StatusDescription": "ดำเนินการสมบูรณ์",
+            "CountTotal": 1
+        },
+        {
+            "Status": 5,
+            "StatusDescription": "เสร็จสิ้น",
+            "CountTotal": 3
+        }
+    ]
+}
