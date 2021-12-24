@@ -1,0 +1,212 @@
+
+#MydetailTicket .pHeader,
+#MydetailTicket .statuscount {
+    font-family: 'promptregular', sans-serif;
+}
+
+#MydetailTicket .pHeader {
+    font-size: 25px;
+}
+
+#MydetailTicket .pNumber {
+    margin: 0;
+    color: #313a46;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+#MydetailTicket .pText {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+#MydetailTicket .card-header {
+    font-weight: 500;
+    font-size: 16px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+#MydetailTicket .tableList th {
+    font-weight: bold;
+    color: #000;
+}
+
+#MydetailTicket .box-search {
+    border: 0.5px solid #ffe8c4;
+    border-radius: 5px;
+    width: 100%;
+    padding: 15px;
+    background: #FFF6E8;
+}
+
+#MydetailTicket .tableList th,
+#MydetailTicket .tableList td {
+    padding: 0.75rem;
+    background-color: #fff;
+}
+
+#MydetailTicket .ui-widget-header {
+    background: #fff !important;
+    border: none !important;
+}
+
+#MydetailTicket p.pHeader {
+    margin: 5px 10px;
+    font-size: 18px;
+}
+
+#MydetailTicket .padrg {
+    padding-right: 7.5px;
+}
+
+#MydetailTicket .padlf {
+    padding-left: 7.5px;
+}
+
+#MydetailTicket p-chart.chartCus canvas {
+    margin: 3% auto;
+    width: 200;
+    height: 200;
+}
+
+#MydetailTicket p-chart.barCus canvas {
+    width: 100%;
+    height: 39;
+}
+
+#MydetailTicket .padbarchart {
+    padding-bottom: 41px;
+}
+
+#MydetailTicket .padConten {
+    padding: 0 10%;
+}
+
+
+/* color btn */
+
+#MydetailTicket .badge-InproCut {
+    background: #aed2f9;
+    color: #2d2d2d;
+    font-size: 13px;
+    font-weight: normal !important;
+    padding: 7px 4px;
+    border-radius: 500px;
+    width: 100% !important;
+    font-weight: 600;
+}
+
+#MydetailTicket .badge-successCut {
+    background: #84e079;
+    color: #2d2d2d;
+    font-size: 13px;
+    font-weight: normal !important;
+    padding: 7px 4px;
+    border-radius: 500px;
+    width: 100% !important;
+    font-weight: 600;
+}
+
+#MydetailTicket .badge-orangeCut {
+    background: #FFD37A;
+    color: #2d2d2d;
+    font-size: 13px;
+    font-weight: normal !important;
+    padding: 7px 4px;
+    border-radius: 500px;
+    width: 100% !important;
+    font-weight: 600;
+}
+
+#MydetailTicket .badge-closedCut {
+    background: #9fa9b3;
+    color: #2d2d2d;
+    font-size: 13px;
+    font-weight: normal !important;
+    padding: 7px 4px;
+    border-radius: 500px;
+    width: 100% !important;
+    font-weight: 600;
+}
+
+
+/* ความสำคัญ */
+
+#MydetailTicket .badge-HighCut {
+    background: #FF6E6E;
+    color: #fff;
+    font-size: 13px;
+    font-weight: normal !important;
+    padding: 7px 4px;
+    border-radius: 500px;
+    width: 100% !important;
+    font-weight: 600;
+}
+
+#MydetailTicket .badge-MediumCut {
+    background: #f7952e;
+    color: #fff;
+    font-size: 13px;
+    font-weight: normal !important;
+    padding: 7px 4px;
+    border-radius: 500px;
+    width: 100% !important;
+    font-weight: 600;
+}
+
+#MydetailTicket .badge-LowCut {
+    background: #d4a929;
+    color: #fff;
+    font-size: 13px;
+    font-weight: normal !important;
+    padding: 7px 4px;
+    border-radius: 500px;
+    width: 100% !important;
+    font-weight: 600;
+}
+
+#MydetailTicket .btn-warningCut {
+    color: #111;
+    background-color: #ffe59a;
+    border-color: #ffc107;
+}
+
+
+/* end color btn */
+
+#MydetailTicket .btnclass {
+    width: 100px;
+    text-align: center;
+}
+
+#MydetailTicket .ticketNoclass {
+    text-align: center;
+    width: 150px !important;
+}
+
+#MydetailTicket .numberclass {
+    text-align: center;
+    width: 80px !important;
+}
+
+@media (max-width: 560px) {
+    #MydetailTicket .badge-InproCut,
+    #MydetailTicket .badge-successCut,
+    #MydetailTicket .badge-orangeCut,
+    #MydetailTicket .badge-closedCut {
+        width: 50% !important;
+    }
+    #MydetailTicket .numberclass,
+    #MydetailTicket .ticketNoclass {
+        text-align: left;
+        width: 100% !important;
+    }
+    #MydetailTicket .tableList th,
+    #MydetailTicket .tableList td {
+        text-align: left !important;
+    }
+  
+
+}
+

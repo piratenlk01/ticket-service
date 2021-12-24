@@ -1,0 +1,221 @@
+<div id="detailTicket">
+    <div class="card" id="mycardopenticket" style="border:none;">
+        <p-confirmDialog [baseZIndex]="10000" rejectButtonStyleClass="p-button-text"></p-confirmDialog>
+        <div class="row">
+            <div class="col-12 d-flex justify-content-between pt-3 px-5">
+                <div>
+                    <button class="btn btn-secondary me-1" (click)="Backpage()"><i class="fa fa-arrow-circle-left"
+                            aria-hidden="true"></i> ย้อนกลับ</button>
+                    <button *ngIf="saveShowBtn == false" class="btn btn-primary me-1" (click)="Insert()">
+                        <i class="fas fa-save" aria-hidden="true"></i>
+                        บันทึก</button>
+                </div>
+                <div>
+                    <span class="gopagestatus" [routerLink]="['/ticket/StatusEticket']">ไปยังหน้าตรวจสอบสถานะ 
+                        <i class="far fa-hand-point-right ml-2" aria-hidden="true"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p-messages [(value)]="Msgs"></p-messages>
+            </div>
+        </div>
+    </div>
+    <div class="card-body" style="background: #fff;">
+        <div class="row" *ngIf="detailsTkShow == true">
+            <div class="col-lg-12">
+                <h4 class="form-section"><i class="fas fa-info-circle"></i> รายละเอียด Ticket</h4>
+                <div class="form-group row contentForm">
+                    <div class="col-lg-2">
+                        <p><b>Ticket No.:</b></p>
+                    </div>
+                    <div class="col-lg-2">
+                        <p>{{detailview.TicketNo}}</p>
+                    </div>
+                    <div class="col-lg-2">
+                        <p><b>สถานะ:</b></p>
+                    </div>
+                    <div class="col-lg-2">
+                        <p>{{detailview.StatusDescription}}</p>
+                    </div>
+                    <div class="col-lg-2">
+                        <p><b>สร้างโดย:</b></p>
+                    </div>
+                    <div class="col-lg-2">
+                        <p>{{detailview.UserCreateName}}</p>
+                    </div>
+                    <div class="col-lg-2">
+                        <p><b>เวลาสร้าง:</b></p>
+                    </div>
+                    <div class="col-lg-2">
+                        <p>{{detailview.DatetimeCreate}}</p>
+                    </div>
+                    <div class="col-lg-2">
+                        <p><b>ความสำคัญ:</b></p>
+                    </div>
+                    <div class="col-lg-2">
+                        <p>{{detailview.Prioritydescription}}</p>
+                    </div>
+                    <div class="col-lg-2">
+                        <p><b>ผู้รับผิดชอบ:</b></p>
+                    </div>
+                    <div class="col-lg-2">
+                        <p>{{detailview.CurrentAssignToName}}</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- E-Ticket -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h4 class="form-section"><i class="fa fa-tasks" aria-hidden="true"></i> E-Ticket</h4>
+            </div>
+        </div>
+
+        <div class="content-padding" [formGroup]="addtopic">
+            <div class="form-group row">
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <p>บริษัท <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-9">
+                    <div>
+                        <select class="form-select" name="ticketType" aria-label="Default select example" formControlName="CompCode"
+                        [ngClass]="{ 'is-invalid': compcode.touched && compcode.value === '0'}" required>
+                            <option class="form-control" value="0" selected disabled>กรุณาเลือก</option>
+                            <option class="form-control" *ngFor="let z of ticketCompany;" [value]="z.id">
+                                {{z.text}}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="invalid-feedback">
+                        <span style="color:#FF3434" *ngIf="compcode.touched && compcode.value == '0'">* กรุณาเลือก บริษัท</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <p>หัวข้อ <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-9">
+                    <input formControlName="Topic" type="text" class="form-control" placeholder="หัวข้อ"
+                    [ngClass]="{ 'is-invalid': topic.errors?.required && topic.touched}" required>
+                    <div class="invalid-feedback">
+                        <span style="color:#FF3434" *ngIf="topic.errors?.required && topic.touched">กรุณากรอกหัวข้อ</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <p>ฝ่ายที่ติดต่อ <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-9">
+                    <div>
+                        <select class="form-select" name="ticketDivision" aria-label="Default select example" formControlName="ETicket_DivisionId"
+                        [ngClass]="{ 'is-invalid': eticketdivision.touched && eticketdivision.value === '0'}" required>
+                            <option class="form-control"  value="0" selected disabled>กรุณาเลือก</option>
+                            <option class="form-control" *ngFor="let z of ticketDivision;" [value]="z.id">
+                                {{z.text}}
+                            </option>
+                        </select>
+                        <div class="invalid-feedback">
+                            <span style="color:#FF3434" *ngIf="eticketdivision.touched && eticketdivision.value == '0'">* กรุณาเลือก ฝ่ายที่ติดต่อ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <p>ประเภทหรือโปรแกรมที่ติดต่อ <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-9">
+                    <div>
+                        <select class="form-select" name="ticketType" aria-label="Default select example" formControlName="ETicket_TypeId"
+                        [ngClass]="{ 'is-invalid': etickettypeid.touched && etickettypeid.value === '0'}" required>
+                            <option class="form-control" value="0" selected disabled>กรุณาเลือก</option>
+                            <option class="form-control" *ngFor="let z of ticketType;" [value]="z.id">
+                                {{z.text}}
+                            </option>
+                        </select> 
+                        <div class="invalid-feedback">
+                            <span style="color:#FF3434" *ngIf="etickettypeid.touched && etickettypeid.value == '0'">* กรุณาเลือก ประเภทหรือโปรแกรมที่ติดต่อ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <p>คำอธิบาย <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-9">
+                    <textarea formControlName="Description" class="form-control" rows="4"
+                    [ngClass]="{ 'is-invalid': description.errors?.required && description.touched}" required></textarea>
+                    <div *ngIf="DescActive == true" style="color:red">* กรุณากรอก คำอธิบาย</div>
+                    <div class="invalid-feedback">
+                        <span style="color:#FF3434" *ngIf="description.errors?.required && description.touched">กรุณากรอกคำอธิบาย</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <p>E-mail <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-9">
+                    <input formControlName="Email" type="email" class="form-control" placeholder="E-mail"
+                    [ngClass]="{ 'is-invalid': email.errors?.required && email.touched}" required>
+                    <div class="invalid-feedback">
+                        <span style="color:#FF3434" *ngIf="email.errors?.required && email.touched">กรุณากรอกE-mail</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <p>เบอร์โทรศัพท์ <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-9">
+                    <input formControlName="Telephone" type="text" class="form-control" placeholder="เบอร์โทรศัพท์"
+                    [ngClass]="{ 'is-invalid': telephone.errors?.required && telephone.touched}" required>
+                    <div class="invalid-feedback">
+                        <span style="color:#FF3434" *ngIf="telephone.errors?.required && telephone.touched">กรุณากรอก เบอร์โทรศัพท์</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <p>E-mail หัวหน้างาน <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-9">
+                    <input formControlName="EmailSupervisor" type="email" class="form-control" placeholder="E-mail หัวหน้างาน"
+                    [ngClass]="{ 'is-invalid': emailsupervisor.errors?.required && emailsupervisor.touched}" required>
+                    <div class="invalid-feedback">
+                        <span style="color:#FF3434" *ngIf="emailsupervisor.errors?.required && emailsupervisor.touched">กรุณากรอก E-mail หัวหน้างาน</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal Rating-->
+<div class="modal fade" id="ratingModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">ปิดคำร้อง</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center" style="padding: 50px;">
+                <p-rating [(ngModel)]="ratingscore" [cancel]="false"></p-rating>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">ปิดคำร้อง</button>
+            </div>
+        </div>
+    </div>
+</div>

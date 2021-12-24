@@ -1,0 +1,121 @@
+#MydetailTicket h4 {
+    font-family: 'promptregular', sans-serif;
+}
+
+#MydetailTicket .form-section {
+    color: #343a40;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    letter-spacing: .5px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-bottom: 1px solid #343a40;
+}
+
+#MydetailTicket .contentForm {
+    background: beige;
+    border: 1px solid rgba(108, 117, 125, .2);
+    margin: 0 5px;
+    padding: 20px;
+}
+
+#MydetailTicket select.form-control {
+    padding: 2px 10px;
+}
+
+#MydetailTicket .content-padding {
+    padding: 20px 40px;
+}
+
+
+/* bar button*/
+
+#navbarcustomfixmyticket {
+    overflow: hidden;
+    background-color: #fff;
+    z-index: 999;
+    width: 100%;
+    margin: 0 15px;
+}
+
+#navbarcustomfixmyticket .paddingbtn {
+    padding: 10px 0 10px 30px;
+}
+
+#MydetailTicket .content {
+    padding: 16px;
+}
+
+#MydetailTicket .stickymyticketcustom {
+    position: fixed;
+    width: 100%;
+    top: 61px;
+    box-shadow: 0 8px 6px -6px #c0c0c0;
+    margin: 0;
+}
+
+#MydetailTicket .stickymyticketcustom+.content {
+    padding-top: 60px;
+}
+
+#MydetailTicket .stickyfix {
+    padding-top: 100px;
+}
+
+#MydetailTicket .pad-select {
+    padding: 0;
+    border: none;
+}
+
+#MydetailTicket .select2-container .select2-selection--single {
+    height: 38px;
+    border-color: #d6d6d6;
+    padding-top: 5px;
+}
+
+/* color btn */
+
+#MydetailTicket .badge-InproCut {
+    background: #aed2f9;
+    color: #2d2d2d;
+    font-size: 14px;
+    font-weight: bold !important;
+    padding: 7px 4px;
+    border-radius: 500px;
+    width: 80% !important;
+    font-weight: 600;
+}
+
+#MydetailTicket .badge-successCut {
+    background: #84e079;
+    color: #2d2d2d;
+    font-size: 14px;
+    font-weight: bold !important;
+    padding: 7px 4px;
+    border-radius: 500px;
+    width: 80% !important;
+    font-weight: 600;
+}
+
+#MydetailTicket .badge-orangeCut {
+    background: #FFD37A;
+    color: #2d2d2d;
+    font-size: 14px;
+    font-weight: bold !important;
+    padding: 7px 4px;
+    border-radius: 500px;
+    width: 80% !important;
+    font-weight: 600;
+}
+
+#MydetailTicket .badge-closedCut {
+    background: #9fa9b3;
+    color: #2d2d2d;
+    font-size: 14px;
+    font-weight: bold !important;
+    padding: 7px 4px;
+    border-radius: 500px;
+    width: 80% !important;
+    font-weight: 600;
+}

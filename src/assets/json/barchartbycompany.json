@@ -1,0 +1,309 @@
+{
+    "data": {
+        "Title": "ภาพรวม Ticket แสดงตามบริษัทที่ติดต่อ",
+        "BarChart": {
+            "labels": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "datasets": [
+                {
+                    "label": "127",
+                    "backgroundColor": "#ff3333",
+                    "borderColor": "#ff3333",
+                    "data": [
+                        0,
+                        0,
+                        1,
+                        2,
+                        0,
+                        1,
+                        0,
+                        1,
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "label": "99C",
+                    "backgroundColor": "#00ffbf",
+                    "borderColor": "#00ffbf",
+                    "data": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "label": "ALA",
+                    "backgroundColor": "#ffcce0",
+                    "borderColor": "#ffcce0",
+                    "data": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "label": "BSG",
+                    "backgroundColor": "#EDDD53",
+                    "borderColor": "#EDDD53",
+                    "data": [
+                        0,
+                        1,
+                        6,
+                        3,
+                        6,
+                        9,
+                        6,
+                        1,
+                        2,
+                        2,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "label": "BTL",
+                    "backgroundColor": "#33995D",
+                    "borderColor": "#33995D",
+                    "data": [
+                        0,
+                        14,
+                        4,
+                        6,
+                        10,
+                        9,
+                        10,
+                        16,
+                        7,
+                        5,
+                        8,
+                        5
+                    ]
+                },
+                {
+                    "label": "FMS",
+                    "backgroundColor": "#de9de2",
+                    "borderColor": "#de9de2",
+                    "data": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "label": "NHC",
+                    "backgroundColor": "#44ADE5",
+                    "borderColor": "#44ADE5",
+                    "data": [
+                        1,
+                        33,
+                        52,
+                        32,
+                        43,
+                        61,
+                        60,
+                        22,
+                        11,
+                        7,
+                        9,
+                        8
+                    ]
+                },
+                {
+                    "label": "NHL",
+                    "backgroundColor": "#8e8ebe",
+                    "borderColor": "#8e8ebe",
+                    "data": [
+                        0,
+                        8,
+                        8,
+                        0,
+                        9,
+                        14,
+                        2,
+                        4,
+                        13,
+                        8,
+                        7,
+                        5
+                    ]
+                },
+                {
+                    "label": "NHP",
+                    "backgroundColor": "#FF5733",
+                    "borderColor": "#FF5733",
+                    "data": [
+                        0,
+                        11,
+                        14,
+                        3,
+                        25,
+                        6,
+                        11,
+                        6,
+                        5,
+                        8,
+                        3,
+                        4
+                    ]
+                },
+                {
+                    "label": "NLB",
+                    "backgroundColor": "#511849",
+                    "borderColor": "#511849",
+                    "data": [
+                        0,
+                        3,
+                        6,
+                        6,
+                        13,
+                        8,
+                        3,
+                        3,
+                        3,
+                        3,
+                        4,
+                        0
+                    ]
+                },
+                {
+                    "label": "PCT",
+                    "backgroundColor": null,
+                    "borderColor": null,
+                    "data": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        18,
+                        16,
+                        12,
+                        5,
+                        6,
+                        1,
+                        7,
+                        4
+                    ]
+                },
+                {
+                    "label": "PJT",
+                    "backgroundColor": null,
+                    "borderColor": null,
+                    "data": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        3,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "label": "SGB",
+                    "backgroundColor": "#f04285",
+                    "borderColor": "#f04285",
+                    "data": [
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "label": "SGZ",
+                    "backgroundColor": null,
+                    "borderColor": null,
+                    "data": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        2,
+                        0,
+                        2,
+                        0,
+                        0,
+                        3,
+                        0
+                    ]
+                },
+                {
+                    "label": "STC",
+                    "backgroundColor": "#89b530",
+                    "borderColor": "#89b530",
+                    "data": [
+                        0,
+                        4,
+                        12,
+                        6,
+                        11,
+                        11,
+                        15,
+                        8,
+                        4,
+                        2,
+                        3,
+                        1
+                    ]
+                }
+            ]
+        },
+        "Options": null
+    }
+}

@@ -1,0 +1,358 @@
+@import "../../../assets/color";
+
+$sidebar-width: 250;
+$color-bgColor: #2c3e5a;
+$color-liActive: #4287b3;
+$color-btnNav: #fff;
+
+.btnLogout {
+  padding: 0.25rem 0.5rem;font-size: 0.875rem;line-height: 1.5;border-radius: 0.2rem;border: 1px solid $color-btnNav;cursor: pointer;
+  color: $color-btnNav;
+  font-size: 13px;
+}
+
+.btnLogout:hover {
+  color: $color-bgColor;
+  background: $color-btnNav;
+}
+
+a, a:hover, a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+.margin-toplaout{
+  margin-top:70px;
+}
+
+#sidebar[_ngcontent-c1] > .menu[_ngcontent-c1]::-webkit-scrollbar-thumb {
+  background-color: #d6d6d6;
+}
+
+.navbar {
+  z-index: 999;
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  background: $color-bgColor;
+  color: $p-color;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  justify-content: unset;
+}
+
+.navbar-btn {
+  font-size: 1em;
+  padding: 2px 10px;
+  border: none;
+  background: transparent;
+  color: $color-btnNav;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 15px;
+
+  &:hover {
+    background: transparent;
+    color: $color-btnNav;
+    border: 1px solid white;
+  }
+}
+
+.navbar-title {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-top: -3px;
+}
+
+@media (max-width: 676px) {
+  .navbar-title {
+    font-size: 1em !important;
+  }
+
+  .date-time  {
+    display: none !important;
+  }
+}
+
+@media (max-width: 676px) {
+  .legend-item  {
+      margin-right: 20px;
+      display: flex !important;
+      cursor: pointer;
+  }
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
+  margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+#sidebar {
+  background: white;
+  color: black;
+
+  .sidebar-header {
+    height: 60px;
+    padding: 10px;
+    background: $color-bgColor;
+    color:$color-btnNav;
+  }
+
+  .account-status {
+    height: 111px;
+    background: $color-bgColor;
+    color: $s-color;
+    border-bottom: 1px solid transparent;
+    font-size: 13px;
+    .account-icon {
+      padding: 10px;
+      font-size: 30px;
+    }
+
+    .account-caption {
+      padding-top: 5px;
+
+      .username {
+        font-size: 0.85em;
+      }
+
+      .position {
+        font-size: 0.75em;
+      }
+    }
+
+    .account-signout {
+      padding: 10px;
+      font-size: 30px;
+      cursor: pointer;
+
+      &:hover {
+        color: $h-s-color-bg;
+      }
+    }
+  }
+  //menu
+  ul {
+    padding-left: 0;
+    list-style: none;
+    color: $color-btnNav !important;
+    background: $color-bgColor !important;
+
+    li:hover {
+      color: $h-s-color;
+      background: $h-s-color-bg;
+      transition: all 1s;
+    }
+
+    li.active {
+      color: $s-dark-color;
+      background: $color-liActive;
+    }
+
+    li a {
+      padding: 10px;
+      font-size: 0.85em;
+      display: block;
+    }
+
+    > li.active > a.haschildren {
+      background: $color-bgColor;
+      color: $s-light-color;
+    }
+
+    > li > a.haschildren::before {
+      display: block;
+      position: absolute;
+      right: 20px;
+      font-size: 1em;
+      font-weight: 900;
+      font-family: "Font Awesome 5 Free";  
+      content: "\f0d7";
+      margin-top: 0;
+    }
+
+    > li.nav-expand > a.haschildren::before {
+      content: '\f0d8';
+      margin-top: 0em;
+    }
+
+    ul a {
+      font-size: 0.75em !important;
+      padding-left: 1.5em !important;
+    }
+  }
+  //toggle show child menu
+  li > ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+  }
+
+  li.nav-expand > ul {
+    max-height: 500px;
+    overflow: hidden;
+    transition: max-height 0.3s;
+  }
+  //scrollbar
+  > .menu {
+    position: absolute;
+    overflow-y: auto;
+    top: 165px;
+    bottom: 0;
+    width: 100%;
+  }
+
+  > .menu::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+  }
+
+  > .menu::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
+  }
+
+  > .menu::-webkit-scrollbar-thumb {
+    background-color: $s-light-color-bg;
+    border: 2px solid white;
+  }
+}
+
+
+
+.navbar-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+}
+
+a.nav-toggle {
+  position: relative;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (min-width: 769px) {
+  #sidebar {
+    width: ($sidebar-width*1px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 999;
+    transition: all 0.3s;
+  }
+
+  #sidebar.large-collapse {
+    margin-left: -($sidebar-width*1px);
+  }
+
+  #content {
+    width: calc(100% - #{($sidebar-width*1px)});
+    min-height: 100%;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #F6F6F7;
+    font-size: .85em;
+  }
+
+  #content.large-collapse {
+    width: 100%;
+  }
+
+  #content.large-collapse > .navbar > .navbar-top-right {
+    position: absolute;
+    right: 15px;
+  }
+
+  #content > .navbar > .navbar-top-right {
+    position: absolute;
+    right: ($sidebar-width+15px);
+  }
+}
+
+@media (max-width: 768px) {
+
+  #sidebar {
+    width: ($sidebar-width*1px);
+    position: fixed;
+    top: 0;
+    left: -($sidebar-width*1px);
+    height: 100%;
+    z-index: 999;
+    transition: all 0.3s;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  #sidebar.small-collapse {
+    left: 0;
+    z-index: 99999;
+  }
+
+  #dismiss {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: #7386D5;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  #dismiss:hover {
+    background: $color-btnNav;
+    color: #7386D5;
+  }
+
+  .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    display: none;
+  }
+  /* ---------------------------------------------------
+    CONTENT STYLE
+    ----------------------------------------------------- */
+  #content {
+    width: 100%;
+    min-height: 100%;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #F5F6FA;
+  }
+
+  #content > .navbar > .navbar-top-right > .btn {
+    display: none;
+  }
+
+  #content > .navbar > .navbar-top-right {
+    position: absolute;
+    right: 20px;
+  }
+}
+
+#sidebar {
+  background: $color-bgColor;
+  color: $color-btnNav;
+}

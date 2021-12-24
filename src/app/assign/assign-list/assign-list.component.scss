@@ -1,0 +1,212 @@
+
+#assignticket .pHeader,
+#assignticket .statuscount {
+    font-family: 'promptregular', sans-serif;
+}
+
+#assignticket .pHeader {
+    font-size: 25px;
+}
+
+#assignticket .pNumber {
+    margin: 0;
+    color: #313a46;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+#assignticket .pText {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+#assignticket .card-header {
+    font-weight: 500;
+    font-size: 16px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+#assignticket .tableList th {
+    font-weight: bold;
+    color: #000;
+}
+
+#assignticket .box-search {
+    border: 0.5px solid #ffe8c4;
+    border-radius: 5px;
+    width: 100%;
+    padding: 15px;
+    background: #FFF6E8;
+}
+
+#assignticket .tableList th,
+#assignticket .tableList td {
+    padding: 0.75rem;
+    background-color: #fff;
+}
+
+#assignticket .ui-widget-header {
+    background: #fff !important;
+    border: none !important;
+}
+
+#assignticket p.pHeader {
+    margin: 5px 10px;
+    font-size: 18px;
+}
+
+#assignticket .padrg {
+    padding-right: 7.5px;
+}
+
+#assignticket .padlf {
+    padding-left: 7.5px;
+}
+
+#assignticket p-chart.chartCus canvas {
+    margin: 3% auto;
+    width: 200;
+    height: 200;
+}
+
+#assignticket p-chart.barCus canvas {
+    width: 100%;
+    height: 39;
+}
+
+#assignticket .padbarchart {
+    padding-bottom: 41px;
+}
+
+#assignticket .padConten {
+    padding: 0 10%;
+}
+
+
+/* color btn */
+
+#assignticket .badge-InproCut {
+    background: #aed2f9;
+    color: #2d2d2d;
+    font-size: 13px;
+    font-weight: normal !important;
+    padding: 7px 4px;
+    border-radius: 500px;
+    width: 100% !important;
+    font-weight: 600;
+}
+
+#assignticket .badge-successCut {
+    background: #84e079;
+    color: #2d2d2d;
+    font-size: 13px;
+    font-weight: normal !important;
+    padding: 7px 4px;
+    border-radius: 500px;
+    width: 100% !important;
+    font-weight: 600;
+}
+
+#assignticket .badge-orangeCut {
+    background: #FFD37A;
+    color: #2d2d2d;
+    font-size: 13px;
+    font-weight: normal !important;
+    padding: 7px 4px;
+    border-radius: 500px;
+    width: 100% !important;
+    font-weight: 600;
+}
+
+#assignticket .badge-closedCut {
+    background: #9fa9b3;
+    color: #2d2d2d;
+    font-size: 13px;
+    font-weight: normal !important;
+    padding: 7px 4px;
+    border-radius: 500px;
+    width: 100% !important;
+    font-weight: 600;
+}
+
+
+/* ความสำคัญ */
+
+#assignticket .badge-HighCut {
+    background: #FF6E6E;
+    color: #fff;
+    font-size: 13px;
+    font-weight: normal !important;
+    padding: 7px 4px;
+    border-radius: 500px;
+    width: 100% !important;
+    font-weight: 600;
+}
+
+#assignticket .badge-MediumCut {
+    background: #f7952e;
+    color: #fff;
+    font-size: 13px;
+    font-weight: normal !important;
+    padding: 7px 4px;
+    border-radius: 500px;
+    width: 100% !important;
+    font-weight: 600;
+}
+
+#assignticket .badge-LowCut {
+    background: #d4a929;
+    color: #fff;
+    font-size: 13px;
+    font-weight: normal !important;
+    padding: 7px 4px;
+    border-radius: 500px;
+    width: 100% !important;
+    font-weight: 600;
+}
+
+#assignticket .btn-warningCut {
+    color: #111;
+    background-color: #ffe59a;
+    border-color: #ffc107;
+}
+
+
+/* end color btn */
+
+#assignticket .btnclass {
+    width: 100px;
+    text-align: center;
+}
+
+#assignticket .ticketNoclass {
+    text-align: center;
+    width: 150px !important;
+}
+
+#assignticket .numberclass {
+    text-align: center;
+    width: 80px !important;
+}
+
+@media (max-width: 560px) {
+    #assignticket .badge-InproCut,
+    #assignticket .badge-successCut,
+    #assignticket .badge-orangeCut,
+    #assignticket .badge-closedCut {
+        width: 50% !important;
+    }
+    #assignticket .numberclass,
+    #assignticket .ticketNoclass {
+        text-align: left;
+        width: 100% !important;
+    }
+    #assignticket .tableList th,
+    #assignticket .tableList td {
+        text-align: left !important;
+    }
+  
+
+}
+

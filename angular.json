@@ -28,9 +28,22 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+                "node_modules/@fortawesome/fontawesome-free/css/all.css",
+                "node_modules/bootstrap/dist/css/bootstrap.css",
+                "node_modules/quill/dist/quill.core.css",
+                "node_modules/quill/dist/quill.snow.css",
+                "node_modules/primeicons/primeicons.css",
+                "node_modules/primeng/resources/themes/saga-blue/theme.css",
+                "node_modules/primeng/resources/primeng.min.css",
+                "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+                "node_modules/jquery/dist/jquery.js",
+                "node_modules/bootstrap/dist/js/bootstrap.js",
+                "node_modules/quill/dist/quill.js",
+                "node_modules/chart.js/dist/Chart.js",
+                "node_modules/echarts/dist/echarts.js"
+            ]
           },
           "configurations": {
             "production": {

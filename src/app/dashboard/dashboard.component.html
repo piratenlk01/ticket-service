@@ -1,0 +1,118 @@
+<div id="selectcompcode" style="padding-bottom: 15px;">
+    <div class="card content">
+        <div class="card-body">
+            <div class="row clearfix">
+                <div class="row" style="margin: auto;width: 70%;margin-bottom: 15px; margin-top: 15px;">
+                    <div class="col-4 text-center">
+                        <p class="pHeader">เลือกบริษัท:</p>
+                    </div>
+                    <div class="col-6 text-center">
+                        <select class="form-select" name="companyname" [(ngModel)]="companyname" >
+                            <option class="form-control" disabled aria-selected="true">กรุณาเลือก</option>
+                            <option class="form-control" *ngFor="let z of ticketCompany;" [value]="z.id">
+                                {{z.text}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="panelTK" style="padding-bottom: 15px;">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <h5 class="card-header">สรุปประจำวัน</h5>
+                <div class="card-body">
+                    <div class="card-group mt-2">
+                        <div class="card" *ngFor="let item of CountStatusModelItem;">
+                            <div class="card-body contentPanel text-center bgPink" [ngStyle]="{'background-color':item.backgroundColor}">
+                                <div class="icon-info mb-3"><i class="{{item.icon}} bg-soft-warning"></i></div>
+                                <h3>{{item.CountTotal}}</h3>
+                            </div>
+                            <div [ngStyle]="{'background-color':item.backgroundColorbottom}">
+                                <h6 class="font-14">{{item.StatusDescription}}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="dashboardTk" style="padding-bottom: 15px;">
+    <div class="row">
+        <!-- ภาพรวม Ticket แสดงตามส่วนงานที่ติดต่อ -->
+        <div class="col-xl-8 col-lg-8 col-md-12 padrg">
+            <div class="card content">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="pHeader">{{DivisionByYearTitle}}<i class="typeper"> (ต่อปี)</i></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body padbarchart">
+                    <p-chart class="barCus" type="bar" [data]="DivisionByYearbar" [options]="options"></p-chart>
+                </div>
+            </div>
+        </div>
+        <!-- ความพึงพอใจของผู้ใช้งาน  -->
+        <div class="col-xl-4 col-lg-4 col-md-12 padlf">
+            <div class="card content">
+                <div class="card-header">
+                    <p class="pHeader">{{SatisfactionDesc.Title}} <i class="typeper">(ต่อเดือน)</i></p>
+                </div>
+                <div class="card-body">
+                    <div class="row contentSatisfaction" *ngIf="adminMode == true">
+                        <div class="col-md-12">
+                            <p-messages [(value)]="Msgs"></p-messages>
+                        </div>
+                    </div>
+                    <div class="col-12 alert alert-warning text-center" role="alert" *ngIf="total == 0" style="width: 90%;margin: auto;">
+                        <p style="margin:5px 0;">ไม่มีข้อมูล</p>
+                    </div>
+                    <p-chart class="chartCus" type="doughnut" [data]="SatisfactionPie" [options]="optionsSatisfaction"></p-chart>
+                    <div class="padConten" *ngIf="total != 0">
+                        <div class="row" *ngFor="let item of SatisfactionDescPie;">
+                            <div class="col-lg-6 col-md-4 col-sm-4 col-5">
+                                <p><b>{{item.labels}}</b></p>
+                            </div>
+                            <div class="col-lg-6 col-md-4 col-sm-4 col-5 text-right">
+                                <p><b>{{item.percent}}%</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ภาพรวม Ticket แสดงตามบริษัทที่ติดต่อ  -->
+<div id="dashboardCompany" style="padding-bottom: 15px;">
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="pHeader">{{CompanyByYearTitle}} <i class="typeper">(ต่อปี)</i></p>
+                </div>
+            </div>
+        </div>
+        <div class="card-body padbarchart">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12">
+                    <div class="overscroll">
+                        <p-chart class="barCusCompany" type="bar" [data]="CompanyByYearbar" [options]="optionsCompany">
+                        </p-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

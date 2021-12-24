@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'promptregular';
+    src: url('./assets/Prompt/prompt-regular-webfont.eot');
+    src: url('./assets/Prompt/prompt-regular-webfont.eot?#iefix') format('embedded-opentype'), url('./assets/Prompt/prompt-regular-webfont.woff2') format('woff2'), url('./assets/Prompt/prompt-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    font-family: 'promptregular', sans-serif;
+}

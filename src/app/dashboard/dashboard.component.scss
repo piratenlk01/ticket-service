@@ -1,0 +1,348 @@
+
+#dashboardTk .content {
+    height: 700px;
+}
+
+#dashboardTk .card-header,
+#dashboardCompany .card-header {
+    font-weight: 500;
+    font-size: 16px;
+    background: #fff;
+}
+
+#dashboardTk .tableList th {
+    font-weight: 500;
+    color: #000;
+}
+
+#dashboardTk .tableList th,
+#dashboardTk .tableList td {
+    padding: 0.75rem;
+    background-color: #fff;
+}
+
+#dashboardTk .ui-widget-header {
+    background: #fff !important;
+    border: none !important;
+}
+
+#dashboardTk .contentSatisfaction {
+    margin: auto;
+    width: 90%;
+    margin-bottom: 55px;
+}
+
+#dashboardCompany p.pHeader,
+#dashboardTk p.pHeader,
+#selectcompcode p.pHeader {
+    margin: 5px 10px;
+    font-size: 18px;
+    display: inline;
+}
+
+#dashboardTk .padrg {
+    padding-right: 7.5px;
+}
+
+#dashboardTk .padlf {
+    padding-left: 7.5px;
+}
+
+#dashboardTk p-chart.chartCus canvas {
+    margin: 3% auto;
+    width: 300px !important;
+    height: auto !important;
+}
+
+#dashboardTk p-chart.barCus canvas {
+    width: 100%;
+    height: 39;
+}
+
+#dashboardTk .padbarchart {
+    padding-bottom: 41px;
+}
+
+#dashboardTk .padConten {
+    padding: 18% 10%;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+#dashboardCompany .typeper,
+#dashboardTk .typeper {
+    color: #909090;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#dashboardCompany .selectcus,
+#dashboardTk .selectcus {
+    position: absolute;
+    right: 0;
+}
+
+#ticketHome.bgHome {
+    /* background: #F0F8FF; */
+    background-color: #fff;
+}
+
+#ticketHome h1 {
+    font-weight: 600;
+    font-size: 40px;
+}
+
+#ticketHome hr.undertitle {
+    margin-bottom: 5%;
+    width: 5%;
+    border-top: 3px solid #68afd8;
+}
+
+#ticketHome .bgHome {
+    background-color: #F2F5F7 !important;
+}
+
+#ticketHome .contentTicket {
+    width: 80%;
+    margin: auto;
+}
+
+#ticketHome .borderHome {
+    cursor: pointer;
+    border: 10px solid #fff;
+    padding: 35px 50px;
+    background: #B2DEF7;
+    color: #403e3e;
+    border-radius: 6px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.14);
+}
+
+.rectangle-out {
+    position: relative;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition: color 300ms;
+    transition: color 300ms;
+}
+
+.rectangle-out:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.3);
+    ;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition: 300ms ease-out;
+    transition: 300ms ease-out;
+}
+
+.rectangle-out:hover:before {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+#ticketHome .pHome {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#ticketHome .contentHome {
+    background: #fff;
+    margin: 20px;
+}
+
+
+/* panelTK */
+
+#panelTK .card-body.contentPanel {
+    padding: 10px;
+}
+
+#panelTK .contentPanel .icon-info i {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+    z-index: 5;
+    margin: 0 auto;
+}
+
+#panelTK .bg-soft-warning {
+    background-color: #ffffff5e;
+    color: #fff !important;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+#panelTK .contentPanel h3,
+#panelTK .contentPanel h6 {
+    color: #fff !important;
+    font-weight: 500;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+#panelTK .bgYellow {
+    background: #FFD37A;
+}
+
+#panelTK .bgBlue {
+    background: #87CCF9;
+}
+
+#panelTK .bgPink {
+    background: #ffa4cc;
+}
+
+#panelTK .bgGreen {
+    background: #7bd670;
+}
+
+#panelTK .bgGray {
+    background: #b9b9b9;
+}
+
+#panelTK h6.font-14 {
+    padding: 8px;
+    color: #fff;
+    text-align: center;
+}
+
+#dashboardCompany .overscroll {
+    overflow: auto;
+}
+
+
+/* end panelTK */
+
+@media (max-width: 1920px) {
+    #dashboardCompany p-chart.barCusCompany canvas {
+        width: 1500px !important;
+        height: auto !important;
+        margin: auto;
+    }
+    #ticketHome .borderHome {
+        padding: 80px 50px;
+    }
+}
+
+@media (max-width: 1600px) {
+    #ticketHome .borderHome {
+        padding: 60px 50px;
+    }
+    #dashboardTk .padConten {
+        padding: 6.5% 10%;
+    }
+    #dashboardTk .content {
+        height: 650px;
+    }
+}
+
+@media (max-width: 1440px) {
+    #ticketHome .borderHome {
+        padding: 35px 50px;
+    }
+    #dashboardTk .padConten {
+        padding: 0 10%;
+    }
+    #dashboardTk .contentSatisfaction {
+        width: 100%;
+    }
+    #dashboardTk p-chart.barCus canvas {
+        width: 95% !important;
+        height: auto !important;
+        margin: auto;
+    }
+}
+
+@media (max-width: 1366px) {
+    #dashboardTk .padConten {
+        padding: 0 10%;
+    }
+    #dashboardTk .padbarchart {
+        padding-bottom: 62px;
+    }
+    #dashboardCompany p.pHeader,
+    #dashboardTk p.pHeader {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    #dashboardTk p.pHeader {
+        font-size: 16px;
+    }
+    #dashboardTk .padbarchart {
+        padding-bottom: 77px;
+        padding-top: 59px;
+    }
+    #dashboardCompany p-chart.barCusCompany canvas {
+        width: 1000px !important;
+        height: auto !important;
+        margin: auto;
+    }
+    #dashboardTk p-chart.chartCus canvas {
+        margin: 3% auto;
+        width: 180px !important;
+        height: auto !important;
+    }
+    #dashboardTk .padConten {
+        padding: 0 10% !important;
+    }
+    #dashboardTk .contentSatisfaction {
+        margin-bottom: 5px;
+    }
+    #dashboardTk .padConten {
+        padding: 0 3% !important;
+    }
+    #dashboardTk .content {
+        height: 550px;
+    }
+}
+
+@media (max-width: 991px) {
+    #dashboardTk .padbarchart {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    #dashboardTk .padrg {
+        padding-right: 15px;
+    }
+    #dashboardTk .padlf {
+        padding-left: 15px;
+        padding-top: 15px;
+    }
+    #dashboardTk .padConten {
+        margin-left: 15%;
+    }
+    #dashboardTk p-chart.chartCus canvas {
+        margin: 3% auto;
+        width: 300px !important;
+        height: auto !important;
+    }
+    #ticketHome .borderHome {
+        margin: 15px;
+    }
+}
+
+@media (max-width: 575px) {
+    #panelTK .card-deck .card {
+        margin-bottom: 10px;
+    }
+    #dashboardTk .padConten {
+        margin-left: 5%;
+    }
+}

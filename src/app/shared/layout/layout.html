@@ -1,0 +1,60 @@
+<div class="wrapper">
+    <nav id="sidebar" #sidebar>
+
+
+        <div class="sidebar-header text-center">
+            <h6 class="pt-1" style="text-transform: uppercase;"><b>{{ProjectName}}</b></h6>
+        </div>
+
+        <div class="account-status justify-content-start text-center">
+            <div>
+                <i class="account-icon fas fa-user-circle" aria-hidden="true"></i>
+            </div>
+            <div class="account-caption">
+                <div class="username">ต้นไม้ ใบหญ้า</div>
+
+            </div>
+        </div>
+
+        <ul class="menu">
+            <li routerLinkActive="active nav-expand">
+                <a class="nav-toggle" navClickToggle routerLink="ticket">
+                    <span class="navbar-icon text-center"></span> <i class="fas fa-ticket-alt"></i>
+                    Ticket
+                </a>
+            </li>
+            <li routerLinkActive="active nav-expand">
+                <a class="nav-toggle" navClickToggle routerLink="assign">
+                    <span class="navbar-icon text-center"></span> <i class="fas fa-hand-holding-medical"></i>
+                    Assign Ticket
+                </a>
+            </li>
+            <li routerLinkActive="active nav-expand">
+                <a class="nav-toggle" navClickToggle routerLink="jobservice">
+                    <span class="navbar-icon text-center"></span> <i class="fas fa-clipboard-list"></i>
+                    งานรอดำเนินการ
+                </a>
+            </li>
+            <li routerLinkActive="active nav-expand">
+                <a class="nav-toggle" navClickToggle routerLink="dashboard">
+                    <span class="navbar-icon text-center"></span> <i class="fas fa-chart-pie"></i>
+                    Dashboard
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="content" #content>
+        <nav class="container-fluid navbar">
+            <button class="navbar-btn" (click)="ToggleSidebar()">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+        </nav>
+        <div class="bgColor"> </div>
+        <div class="container-fluid margin-toplaout" style="margin-top: 60px;">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
+<div #overlay class="overlay" (click)="Dismiss()"></div>

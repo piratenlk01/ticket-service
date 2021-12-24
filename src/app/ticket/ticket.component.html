@@ -1,0 +1,19 @@
+<div id="ticketHome" class="card bgHome">
+    <div class="card-body contentHome">
+        <div class="col-lg-12 text-center mt-5">
+            <h1 class="section-heading">E-Ticket</h1>
+            <hr class="undertitle">
+        </div>
+        <div class="row contentTicket mb-5">
+            <div class="col-lg-5 text-center borderHome rectangle-out" [routerLink]="['/ticket/OpenEticket']">
+                <i class="fa fa-file-text-o" aria-hidden="true" style="font-size: 35px;margin-bottom: 20px;"></i>
+                <p class="pHome">เปิด Ticket ใหม่</p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-5 text-center borderHome rectangle-out" [routerLink]="['/ticket/StatusEticket']">
+                <i class="fa fa-external-link" aria-hidden="true" style="font-size: 35px;margin-bottom: 20px;"></i>
+                <p class="pHome">ตรวจสอบสถานะ Ticket</p>
+            </div>
+        </div>
+    </div>
+</div>

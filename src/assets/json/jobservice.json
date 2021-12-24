@@ -1,0 +1,188 @@
+{
+    "data": {
+        "ETicket": [
+            {
+                "Id": 1300,
+                "TicketNo": "BTL211200005",
+                "Status": 2,
+                "StatusDescription": "กำลังดำเนินการ",
+                "CompCode": "BTL",
+                "CompName": "บริษัท บางกอก เทอร์มินอล โลจิสติกส์ จำกัด",
+                "Topic": "กรุณาแก้ไข เนื่องจากหน้าจอเป็นลาย และสั่นตามไฟล์แนบ",
+                "ETicket_DivisionId": 1,
+                "ETicket_DivisionCode": "INFA",
+                "ETicket_DivisionName": "INFA",
+                "ETicket_TypeId": 4,
+                "ETicket_TypeDescription": "ซ่อมเครื่องคอมพิวเตอร์",
+                "Description": "รายละเอียดตามเอกสาร และวีดีโอ ตามไฟล์แนบ",
+                "Email": "surachai@bkkterminal.com ",
+                "EmailSupervisor": "Somchai@bkkterminal.com, Pairoh@bkkterminal.com, Ratree@bkkterminal.com, Veeruthai@bkkterminal.com, Nattawan@bkkterminal.com, Thirawat@bkkterminal.com",
+                "Telephone": "0935791029",
+                "CurrentAssignTo": 446,
+                "CurrentAssignToName": "กรเกียรติ ตันหยง",
+                "AssignToDatetime": "20/12/2021 10:30",
+                "Priority": 2,
+                "Prioritydescription": "Medium",
+                "StartDate": null,
+                "DueDate": null,
+                "StartTime": null,
+                "DueTime": null,
+                "DescriptionAdvice": null,
+                "Rating": null,
+                "UserCreateId": 420,
+                "UserCreateName": "สุรชัย เลาหไทยมงคล",
+                "DatetimeCreate": "20/12/2021 09:39",
+                "IsUploadFile": true,
+                "IsProcess": true,
+                "IsCompleted": true,
+                "IsComment": true,
+                "IsClose": false,
+                "ETicket_DepartmentId": null,
+                "ETicket_DepartmentName": null,
+                "RatingComment": null,
+                "FilePath": [
+                    {
+                        "Id": 104,
+                        "Filename": "IT Request - K.Veeruthai.pdf",
+                        "FilePath": null,
+                        "FileType": null,
+                        "IdReadFile": "x%2babvG9U%2fJI%3d"
+                    },
+                    {
+                        "Id": 105,
+                        "Filename": "VDO - Veeruthai.mp4",
+                        "FilePath": null,
+                        "FileType": null,
+                        "IdReadFile": "kMguJ%2fiIEjc%3d"
+                    }
+                ],
+                "Comment": [],
+                "Log": [
+                    {
+                        "Id": 7228,
+                        "ETicketId": 1300,
+                        "Status": 2,
+                        "StatusDescription": "กำลังดำเนินการ",
+                        "LogDatetime": "20/12/2021 10:30",
+                        "UserId": 446,
+                        "UserName": "กรเกียรติ ตันหยง",
+                        "Remark": "กำหนดผู้รับผิดชอบเป็น : กรเกียรติ ตันหยง"
+                    },
+                    {
+                        "Id": 7227,
+                        "ETicketId": 1300,
+                        "Status": 1,
+                        "StatusDescription": "เปิด",
+                        "LogDatetime": "20/12/2021 09:39",
+                        "UserId": 420,
+                        "UserName": "สุรชัย เลาหไทยมงคล",
+                        "Remark": ""
+                    }
+                ],
+                "IsValid": true,
+                "Msg": null,
+                "IsValidStatus": 2,
+                "ListMsg": null
+            },
+            {
+                "Id": 1297,
+                "TicketNo": "NHC211200008",
+                "Status": 2,
+                "StatusDescription": "กำลังดำเนินการ",
+                "CompCode": "NHC",
+                "CompName": "บริษัท โงวฮก จำกัด",
+                "Topic": "ย้ายข้อมูลลง Laptop",
+                "ETicket_DivisionId": 1,
+                "ETicket_DivisionCode": "INFA",
+                "ETicket_DivisionName": "INFA",
+                "ETicket_TypeId": 16,
+                "ETicket_TypeDescription": "Setup New NB",
+                "Description": "ย้ายข้อมูลเครื่อง PC พี่เปิ้ล Drybulk ลง Laptop",
+                "Email": "korrakiead@ngowhock.co.th",
+                "EmailSupervisor": "support@ngowhock.co.th",
+                "Telephone": "022961483",
+                "CurrentAssignTo": 446,
+                "CurrentAssignToName": "กรเกียรติ ตันหยง",
+                "AssignToDatetime": "15/12/2021 10:38",
+                "Priority": 2,
+                "Prioritydescription": "Medium",
+                "StartDate": null,
+                "DueDate": null,
+                "StartTime": null,
+                "DueTime": null,
+                "DescriptionAdvice": null,
+                "Rating": null,
+                "UserCreateId": 446,
+                "UserCreateName": "กรเกียรติ ตันหยง",
+                "DatetimeCreate": "15/12/2021 10:38",
+                "IsUploadFile": true,
+                "IsProcess": true,
+                "IsCompleted": true,
+                "IsComment": true,
+                "IsClose": false,
+                "ETicket_DepartmentId": null,
+                "ETicket_DepartmentName": null,
+                "RatingComment": null,
+                "FilePath": [],
+                "Comment": [],
+                "Log": [
+                    {
+                        "Id": 7215,
+                        "ETicketId": 1297,
+                        "Status": 2,
+                        "StatusDescription": "กำลังดำเนินการ",
+                        "LogDatetime": "15/12/2021 10:38",
+                        "UserId": 446,
+                        "UserName": "กรเกียรติ ตันหยง",
+                        "Remark": "กำหนดผู้รับผิดชอบเป็น : กรเกียรติ ตันหยง"
+                    },
+                    {
+                        "Id": 7214,
+                        "ETicketId": 1297,
+                        "Status": 1,
+                        "StatusDescription": "เปิด",
+                        "LogDatetime": "15/12/2021 10:38",
+                        "UserId": 446,
+                        "UserName": "กรเกียรติ ตันหยง",
+                        "Remark": ""
+                    }
+                ],
+                "IsValid": true,
+                "Msg": null,
+                "IsValidStatus": 2,
+                "ListMsg": null
+            }
+        ],
+        "CountTotalStatus": [
+            {
+                "Status": 0,
+                "StatusDescription": "รวมทั้งหมด",
+                "CountTotal": 2
+            },
+            {
+                "Status": 1,
+                "StatusDescription": "Tickets ใหม่",
+                "CountTotal": 0
+            },
+            {
+                "Status": 2,
+                "StatusDescription": "กำลังดำเนินการ",
+                "CountTotal": 2
+            },
+            {
+                "Status": 4,
+                "StatusDescription": "ดำเนินการสมบูรณ์",
+                "CountTotal": 0
+            },
+            {
+                "Status": 5,
+                "StatusDescription": "เสร็จสิ้น",
+                "CountTotal": 0
+            }
+        ],
+        "IsValid": true,
+        "Msg": null,
+        "IsValidStatus": 2,
+        "ListMsg": null
+    }
+}

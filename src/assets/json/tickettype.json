@@ -1,0 +1,80 @@
+{
+    "data":[
+        {
+          "id": "10",
+          "text": "ADMIN"
+        },
+        {
+          "id": "11",
+          "text": "ADVISOR"
+        },
+        {
+          "id": "2",
+          "text": "Dedia"
+        },
+        {
+          "id": "14",
+          "text": "Hardware Setup"
+        },
+        {
+          "id": "7",
+          "text": "KNOW-HOW"
+        },
+        {
+          "id": "19",
+          "text": "Network"
+        },
+        {
+          "id": "12",
+          "text": "PAYMENT"
+        },
+        {
+          "id": "3",
+          "text": "Printer"
+        },
+        {
+          "id": "8",
+          "text": "PROJECT"
+        },
+        {
+          "id": "9",
+          "text": "PURCHASE"
+        },
+        {
+          "id": "18",
+          "text": "Server"
+        },
+        {
+          "id": "16",
+          "text": "Setup New NB"
+        },
+        {
+          "id": "15",
+          "text": "Setup New PC"
+        },
+        {
+          "id": "6",
+          "text": "Software Setup"
+        },
+        {
+          "id": "1",
+          "text": "Web Application"
+        },
+        {
+          "id": "13",
+          "text": "Wifi Setup"
+        },
+        {
+          "id": "17",
+          "text": "แก้ไขโปรแกรม"
+        },
+        {
+          "id": "4",
+          "text": "ซ่อมเครื่องคอมพิวเตอร์"
+        },
+        {
+          "id": "5",
+          "text": "สั่งซื้อเครื่องคอมพิวเตอร์"
+        }
+      ]
+}

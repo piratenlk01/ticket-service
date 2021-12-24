@@ -1,0 +1,320 @@
+<div id="MydetailTicket">
+    <div class="card" id="mycardmyticket" style="border:none;">
+        <p-confirmDialog></p-confirmDialog>
+        <div id="navbarcustomfixmyticket" style="margin: 0;">
+            <div class="row">
+                <div class="col-12 paddingbtn">
+                    <button class="btn btn-secondary me-1" (click)="Backpage()"><i class="fa fa-arrow-circle-left"
+                            aria-hidden="true"></i> ย้อนกลับ</button>
+                    <button class="btn btn-primary me-1" *ngIf="NoShow == true"><i
+                            class="fa fa-save" aria-hidden="true"></i> บันทึก</button>
+                    <button class="btn btn-primary me-1" *ngIf="detailview.IsComment"><i
+                            class="fa fa-check-circle-o" aria-hidden="true"></i> ยืนยันคำร้องขอปิดงาน</button>
+                    <button class="btn btn-info me-1" data-bs-toggle="modal" data-bs-target="#log"><i class="fa fa-list"
+                            aria-hidden="true"></i> Log</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12" style="padding-left: 30px;padding-right: 30px;">
+                    <p-messages [(value)]="Msgs"></p-messages>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body" style="background: #fff;">
+        <div class="row">
+            <div class="col-lg-12">
+                <h4 class="form-section"><i class="fas fa-info-circle"></i> รายละเอียด Ticket</h4>
+                <div class="form-group row contentForm">
+                    <div class="col-lg-2 col-6">
+                        <p><b>Ticket No.:</b></p>
+                    </div>
+                    <div class="col-lg-2 col-6">
+                        <p><b>{{detailview.TicketNo}}</b></p>
+                    </div>
+                    <div class="col-lg-1 col-6">
+                        <p><b>สถานะ:</b></p>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <p *ngIf="detailview.Status == 1" class="badge badge-InproCut">{{detailview.StatusDescription}}
+                        </p>
+                        <p *ngIf="detailview.Status == 2" class="badge badge-orangeCut">{{detailview.StatusDescription}}
+                        </p>
+                        <p *ngIf="detailview.Status == 3" class="badge badge-orangeCut">{{detailview.StatusDescription}}
+                        </p>
+                        <p *ngIf="detailview.Status == 4" class="badge badge-successCut">
+                            {{detailview.StatusDescription}}</p>
+                        <p *ngIf="detailview.Status == 5" class="badge badge-closedCut">{{detailview.StatusDescription}}
+                        </p>
+                    </div>
+                    <div class="col-lg-2 col-6">
+                        <p><b>สร้างโดย:</b></p>
+                    </div>
+                    <div class="col-lg-2 col-6">
+                        <p><b>{{detailview.UserCreateName}}</b></p>
+                    </div>
+                    <div class="col-lg-2 col-6">
+                        <p><b>เวลาสร้าง:</b></p>
+                    </div>
+                    <div class="col-lg-2 col-6">
+                        <p><b>{{detailview.DatetimeCreate}}</b></p>
+                    </div>
+                    <div class="col-lg-2 col-6">
+                        <p><b>ความสำคัญ:</b></p>
+                    </div>
+                    <div class="col-lg-2 col-6">
+                        <p><b>{{detailview.Prioritydescription}}</b></p>
+                    </div>
+                    <div class="col-lg-2 col-6">
+                        <p><b>ผู้รับผิดชอบ:</b></p>
+                    </div>
+                    <div class="col-lg-2 col-6">
+                        <p><b>{{detailview.CurrentAssignToName}}</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- E-Ticket -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h4 class="form-section"><i class="fa fa-tasks" aria-hidden="true"></i> E-Ticket</h4>
+            </div>
+        </div>
+        <div class="content-padding">
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    <p>บริษัท <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-9">
+                    <input [(ngModel)]="detailview.CompName" type="text" class="form-control" placeholder="บริษัท"
+                        disabled>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    <p>หัวข้อ <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-9">
+                    <input [(ngModel)]="detailview.Topic" type="text" class="form-control" placeholder="หัวข้อ"
+                        disabled>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    <p>ฝ่ายที่ติดต่อ <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-9">
+                    <input [(ngModel)]="detailview.ETicket_DivisionName" type="text" class="form-control"
+                        placeholder="หัวข้อ" disabled>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    <p>ประเภทหรือโปรแกรมที่ติดต่อ <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-9">
+                    <input [(ngModel)]="detailview.ETicket_TypeDescription" type="text" class="form-control"
+                        placeholder="หัวข้อ" disabled>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    <p>คำอธิบาย <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-9">
+                    <textarea [(ngModel)]="detailview.Description" class="form-control" rows="4" disabled></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    <p>ไฟล์แนบ </p>
+                </div>
+                <div class="col-lg-9">
+                    <ul *ngFor="let file of detailview.FilePath;">
+                        <div class="row mt-2">
+                            <div class="col-md-12">
+                                <a target="_blank" href="{{BaseUrl}}api/ETicket/Center/ReadFile?id={{file.IdReadFile}}">
+                                    <li>{{file.Filename}}</li>
+                                </a>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    <p>E-mail <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-9">
+                    <input [(ngModel)]="detailview.Email" type="text" class="form-control" disabled>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    <p>เบอร์โทรศัพท์ <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-9">
+                    <input [(ngModel)]="detailview.Telephone" type="text" class="form-control" disabled>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    <p>E-mail หัวหน้างาน <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-9">
+                    <input [(ngModel)]="detailview.EmailSupervisor" type="text" class="form-control" disabled>
+                </div>
+            </div>
+        </div>
+
+        <!-- การจัดการ Ticket -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h4 class="form-section"><i class="fas fa-user-cog"></i> การจัดการ Ticket</h4>
+            </div>
+        </div>
+        <div class="content-padding">
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    <p>ความสำคัญของงาน <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-9">
+                    <select class="form-select" name="ticketType" [(ngModel)]="insertprocess.Priority"
+                        [disabled]="NoEditActive">
+                        <option class="form-control" disabled aria-selected="true">กรุณาเลือก</option>
+                        <option class="form-control" *ngFor="let z of PriorityName;" [value]="z.id">
+                            {{z.text}}
+                        </option>
+                    </select>
+                    <span style="color:red" *ngIf="PriorityActive">* กรุณากรอก ความสำคัญของงาน</span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    <p>วันที่เริ่ม <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-3">
+                    <input [(ngModel)]="StartDate" type="date" class="form-control" name="StartDate"
+                        [disabled]="NoEditActive">
+                    <span style="color:red" *ngIf="StartDateActive">* กรุณากรอก วันที่เริ่ม</span>
+                </div>
+                <div class="col-lg-1">
+                    <p>เวลา <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-3">
+                    <input type="time" [(ngModel)]="StartTime" class="form-control" placeholder="เวลา"
+                        [disabled]="NoEditActive"><br>
+                    <span style="color:red" *ngIf="StartTimeActive">* กรุณากรอก เวลา</span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    <p>วันกำหนดส่ง <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-3">
+                    <input [(ngModel)]="DueDate" type="date" class="form-control" name="DueDate"
+                        [disabled]="NoEditActive">
+                    <span style="color:red" *ngIf="DueDateActive">* กรุณากรอก วันกำหนดส่ง</span>
+                </div>
+                <div class="col-lg-1">
+                    <p>เวลา <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-3">
+                    <input type="time" [(ngModel)]="DueTime" class="form-control" placeholder="เวลา"
+                        [disabled]="NoEditActive"><br>
+                    <span style="color:red" *ngIf="DueTimeActive">* กรุณากรอก เวลา</span>
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <div class="col-lg-3">
+                    <p>แนวทางปฏิบัติ <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-9">
+                    <textarea [(ngModel)]="insertprocess.DescriptionAdvice" name="DescriptionAdvice" cols="30" rows="5"
+                        class="form-control" [disabled]="NoEditActive"></textarea>
+                    <span style="color:red" *ngIf="DescriptionAdviceActive">* กรุณากรอก แนวทางปฏิบัติ</span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    <p>ฝ่าย/แผนก <span style="color: red;font-size: 17px;">*</span></p>
+                </div>
+                <div class="col-lg-9">
+                    <select class="form-select" name="ticketType" [(ngModel)]="insertprocess.ETicket_DepartmentId"
+                        [disabled]="NoEditActive">
+                        <option class="form-control" disabled aria-selected="true">กรุณาเลือก</option>
+                        <option class="form-control" *ngFor="let z of DepartmentName;" [value]="z.id">
+                            {{z.text}}
+                        </option>
+                    </select>
+                    <span style="color:red" *ngIf="DepartmentIdActive">* กรุณากรอก ฝ่าย/แผนก</span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3">Comment</div>
+                <div class="col-lg-9">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="text-center" style="width: 70px;">ลำดับ</th>
+                                <th class="text-center" style="width: 200px;">ผู้ส่ง</th>
+                                <th class="text-center"> ข้อความ</th>
+                                <th class="text-center" style="width: 150px;"> วันที่</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of detailview.Comment; let i= index;">
+                                <td class="text-center">{{i+1}}</td>
+                                <td>{{item.UserName}}</td>
+                                <td>{{item.Message}}</td>
+                                <td class="text-center">{{item.DatetimeCreate}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <textarea [(ngModel)]="insertcomment.Message" name="Message" cols="30" rows="2" class="form-control"
+                        [disabled]="NoEditActive"></textarea>
+                    <div style="color:#ff0505;" *ngIf="commentIsActive == true">* กรุณากรอก Comment</div>
+                    <button class="btn btn-primary btn-sm mt-2" *ngIf="detailview.IsComment" (click)="Comment()">ส่ง
+                        Comment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Log -->
+<div class="modal fade" id="log" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Log</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered authority">
+                    <tr>
+                        <td class="text-center" style="width: 50px;font-weight:bold;">#</td>
+                        <td class="text-center" style="font-weight:bold;">ผู้ดำเนินการ</td>
+                        <td class="text-center" style="font-weight:bold;">สถานะ</td>
+                        <td class="text-center" style="font-weight:bold;">วันที่ดำเนินการ</td>
+                        <td class="text-center" style="font-weight:bold;">Remark</td>
+                    </tr>
+                    <tbody>
+                        <tr *ngFor="let item of detailview.Log; let i= index;" class="text-center">
+                            <td>{{i+1}}</td>
+                            <td>{{item.UserName}}</td>
+                            <td>{{item.StatusDescription}}</td>
+                            <td>{{item.LogDatetime}}</td>
+                            <td>{{item.Remark}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
